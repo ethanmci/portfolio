@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import type StarIconVue from './components/icons/StarIcon.vue';
 </script>
 
 <template>
@@ -21,21 +22,26 @@ import { RouterLink, RouterView } from 'vue-router'
           <h1 class="font-black font-bricolage 2xl:text-7xl text-5xl antialiased text-sky-900 hover:text-sky-700 transition-all mix-blend-hard-light drop-shadow-sm">Ethan McIntyre</h1>
         </div>
         <img class="rounded-full mt-24 mb-4 w-full" src="./assets/photo_of_me.jpg">
+        <StarIconVue/>
         <p class="font-bricolage">Hello, my name is Ethan! I'm a graduate from the Interactive Multimedia Design program at Carleton University with a specialization in Full-Stack Web Development.</p>
       </div>
 
       <!-- contains nav menu -->
-      <div class="col-span-3 h-full bg-slate-50 border-2 border-slate-500 p-4 rounded-lg shadow-md">
-        <ul class="w-full flex flex-wrap font-bricolage">
-          <li class="mr-2">
-            <a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Dashboard</a>
+      <div class="col-span-3 h-full bg-slate-50 border-2 border-slate-500 rounded-lg shadow-md">
+        <ul class="w-full grid-cols-3">
+          <li class="col-span-1">
+            <a href="#" class="text-center font-bold inline-block p-4 border-x-2 border-t rounded-t-full hover:text-gray-600 hover:bg-gray-50">Dashboard</a>
+          </li>
+          <li class="col-span-1">
+            <a href="#" class="text-center font-bold inline-block p-4 border-x-2 border-t rounded-t-full hover:text-gray-600 hover:bg-gray-50">Dashboard</a>
           </li>
         </ul>
         <header>
           <div class="wrapper">
             <nav>
               <RouterLink to="/">Home</RouterLink>
-              <RouterLink to="/contact">About</RouterLink>
+              <RouterLink to="/resume">Resume</RouterLink>
+              <RouterLink to="/contact">Contact</RouterLink>
             </nav>
           </div>
         </header>
