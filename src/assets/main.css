@@ -20,4 +20,5 @@ html, body {
 #name-stacked {
   width: 100vh;
   opacity: 0.3;
+  pointer-events: none;
 }
