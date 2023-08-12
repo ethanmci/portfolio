@@ -26,8 +26,10 @@ import { RouterLink, RouterView } from 'vue-router'
 
       <!-- contains nav menu -->
       <div class="col-span-3 h-full bg-slate-50 border-2 border-slate-500 p-4 rounded-lg shadow-md">
-        <ul class="flex flex-wrap font-bricolage">
-
+        <ul class="w-full flex flex-wrap font-bricolage">
+          <li class="mr-2">
+            <a href="#" class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Dashboard</a>
+          </li>
         </ul>
         <header>
           <div class="wrapper">

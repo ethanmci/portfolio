@@ -4,6 +4,6 @@ import MainContent from '@/components/MainContent.vue';
 
 <template>
   <main>
-    <MainContent/>
+    <p>This will contain my job experience!</p>
   </main>
 </template>
