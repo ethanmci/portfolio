@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import SocialMediaIcon from './components/SocialMediaIcon.vue';
 </script>
 
 <template>
@@ -21,7 +22,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <h1 class="font-black font-bricolage 2xl:text-7xl text-5xl antialiased text-sky-900 hover:text-sky-700 transition-all mix-blend-hard-light drop-shadow-sm">Ethan McIntyre</h1>
         </div>
         <img class="rounded-full mt-24 mb-4 w-full" src="./assets/photo_of_me.jpg">
-        <StarIconVue/>
+        <SocialMediaIcon img-src="./assets/icons/github-square.svg"></SocialMediaIcon>
         <p class="font-bricolage">Hello, my name is Ethan! I'm a graduate from the Interactive Multimedia Design program at Carleton University with a specialization in Full-Stack Web Development.</p>
       </div>
 
