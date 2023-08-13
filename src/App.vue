@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import type StarIconVue from './components/icons/StarIcon.vue';
 </script>
 
 <template>
@@ -30,10 +29,10 @@ import type StarIconVue from './components/icons/StarIcon.vue';
       <div class="col-span-3 h-full bg-slate-50 border-2 border-slate-500 rounded-lg shadow-md">
         <ul class="w-full grid-cols-3">
           <li class="col-span-1">
-            <a href="#" class="text-center font-bold inline-block p-4 border-x-2 border-t rounded-t-full hover:text-gray-600 hover:bg-gray-50">Dashboard</a>
+            <a href="#" class="text-center font-bold inline-block p-4 border-x-2 border-t-2 border-slate-500 rounded-t-full hover:text-gray-600 hover:bg-gray-50">Projects</a>
           </li>
           <li class="col-span-1">
-            <a href="#" class="text-center font-bold inline-block p-4 border-x-2 border-t rounded-t-full hover:text-gray-600 hover:bg-gray-50">Dashboard</a>
+            <a href="#" class="text-center font-bold inline-block p-4 border-x-2 border-t-2 border-slate-500 rounded-t-full hover:text-gray-600 hover:bg-gray-50">Contact</a>
           </li>
         </ul>
         <header>
