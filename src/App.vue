@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRouter } from 'vue-router'
+
+const route = useRouter();
 </script>
 
 <template>
@@ -13,7 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
   />
   <div
     id="main-container"
-    class="absolute md:w-5/6 md:h-3/4 md:m-0 h-full w-full overflow-auto bg-slate-50/70 p-8 border-2 rounded-lg shadow-lg transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+    class="absolute md:w-5/6 md:h-5/6 md:m-0 h-full w-full overflow-auto bg-slate-50/70 p-4 border-2 rounded-lg shadow-lg transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 font-bricolage"
   >
     <div class="relative grid grid-cols-4 h-full gap-4">
       <div
@@ -21,7 +23,7 @@ import { RouterLink, RouterView } from 'vue-router'
       >
         <div class="absolute top-0 w-full mt-4">
           <h1
-            class="font-black font-bricolage 2xl:text-5xl text-6xl antialiased text-sky-900 hover:text-sky-700 transition-all mix-blend-hard-light drop-shadow-sm"
+            class="font-black 2xl:text-5xl text-6xl antialiased text-sky-900 hover:text-sky-700 transition-all mix-blend-hard-light drop-shadow-sm"
           >
             Ethan<br/>McIntyre
           </h1>
@@ -48,41 +50,44 @@ import { RouterLink, RouterView } from 'vue-router'
             />
           </a>
         </div>
-          <p class="font-bricolage">
-            Hi I'm Ethan! I'm a Web Developer and very bad at writing good bios.
-          </p>
+        <p>
+          Hi I'm Ethan! I'm a Web Developer and very bad at writing good bios.
+        </p>
       </div>
 
-      <!-- contains nav menu, hidden and moved  -->
+      <!-- contains nav menu, hidden and moved to one  on small screens -->
       <div
         class="md:col-span-3 md:block hidden h-full bg-slate-50 border-2 border-slate-500 rounded-lg shadow-md"
       >
-        <ul class="w-full grid-cols-3">
-          <li class="col-span-1">
-            <a
-              href="#"
-              class="text-center font-bold inline-block p-4 border-x-2 border-t-2 border-slate-500 rounded-t-full hover:text-gray-600 hover:bg-gray-50"
-              >Projects</a
-            >
-          </li>
-          <li class="col-span-1">
-            <a
-              href="#"
-              class="text-center font-bold inline-block p-4 border-x-2 border-t-2 border-slate-500 rounded-t-full hover:text-gray-600 hover:bg-gray-50"
-              >Contact</a
-            >
-          </li>
-        </ul>
         <header>
-          <div class="wrapper">
-            <nav>
-              <RouterLink to="/">Home</RouterLink>
-              <RouterLink to="/resume">Resume</RouterLink>
-              <RouterLink to="/contact">Contact</RouterLink>
-            </nav>
-          </div>
+          <ul class="w-full grid grid-cols-3 gap-2 mt-2 px-2">
+            <li class="col-span-1">
+              <RouterLink
+                to="/"
+                :class="{ 'bg-sky-500 border-sky-500 text-white': route.currentRoute.value.path == '/', 'border-slate-200': route.currentRoute.value.path != '/' }"
+                class="w-full text-center font-bold inline-block p-2 border-x-2 border-t-2 rounded-t-full hover:text-white hover:bg-sky-500 hover:border-sky-500 transition-all"
+                >Home</RouterLink
+              >
+            </li>
+            <li class="col-span-1">
+              <RouterLink
+                to="/resume"
+                :class="{ 'bg-sky-500 border-sky-500 text-white': route.currentRoute.value.path == '/resume', 'border-slate-200': route.currentRoute.value.path != '/resume' }"
+                class="w-full text-center font-bold inline-block p-2 border-x-2 border-t-2 rounded-t-full hover:text-white hover:bg-sky-500 hover:border-sky-500 transition-all"
+                >Resume</RouterLink
+              >
+            </li>
+            <li class="col-span-1">
+              <RouterLink
+                to="/contact"
+                :class="{ 'bg-sky-500 border-sky-500 text-white': route.currentRoute.value.path == '/contact', 'border-slate-200': route.currentRoute.value.path != '/contact' }"
+                class="w-full text-center font-bold inline-block p-2 border-x-2 border-t-2 rounded-t-full hover:text-white hover:bg-sky-500 hover:border-sky-500 transition-all"
+                >Contact</RouterLink
+              >
+            </li>
+          </ul>
         </header>
-        <RouterView />
+        <RouterView class="border-t-2 border-slate-200 font-bricolage p-4" />
       </div>
     </div>
   </div>

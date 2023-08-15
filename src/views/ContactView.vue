@@ -40,7 +40,7 @@ async function SubmitContact(event: Event) {
 </script>
 
 <template>
-  <main class="p-4 font-bricolage">
+  <main>
     <h2
       class="font-black 2xl:text-5xl text-3xl text-center antialiased text-sky-900 hover:text-sky-700 transition-all mix-blend-hard-light drop-shadow-sm"
     >
@@ -50,7 +50,7 @@ async function SubmitContact(event: Event) {
     <br />
     <form class="grid grid-cols-2">
       <div class="md:col-span-1 col-span-2 md:mr-4 mb-2">
-        <label for="name">*Name</label>
+        <label for="name"><span class="text-red-500">*</span>Name</label>
         <input
           v-model="name"
           name="name"
@@ -61,7 +61,7 @@ async function SubmitContact(event: Event) {
         />
       </div>
       <div class="md:col-span-1 col-span-2 mb-2">
-        <label for="email">*Email</label>
+        <label for="email"><span class="text-red-500">*</span>Email</label>
         <input
           v-model="email"
           name="email"
@@ -82,7 +82,7 @@ async function SubmitContact(event: Event) {
         />
       </div>
       <div class="col-span-2 mb-2">
-        <label for="email">*Message</label>
+        <label for="email"><span class="text-red-500">*</span>Message</label>
         <textarea
           v-model="message"
           name="message"
