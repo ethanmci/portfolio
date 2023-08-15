@@ -8,7 +8,14 @@ const email: Ref<string> = ref('')
 const subject: Ref<string> = ref('')
 const message: Ref<string> = ref('')
 
-function SubmitContact() {}
+function SubmitContact(event: Event) {
+  event.preventDefault()
+  if(!name.value) return;
+  if(!email.value) return;
+  if(!message.value) return;
+
+  console.log("all good!");
+}
 </script>
 
 <template>
@@ -29,6 +36,7 @@ function SubmitContact() {}
           :class="{ 'border-slate-500': name, 'border-red-500': !name }"
           class="border-2 p-2 rounded-md block w-full"
           type="text"
+          placeholder="Your Name"
         />
       </div>
       <div class="md:col-span-1 col-span-2 mb-2">
@@ -37,7 +45,7 @@ function SubmitContact() {}
           v-model="email"
           name="email"
           :class="{ 'border-slate-500': email, 'border-red-500': !email }"
-          class="border-2 border-slate-500 p-2 rounded-md block w-full"
+          class="border-2 p-2 rounded-md block w-full"
           type="email"
           placeholder="example@email.com"
         />
@@ -58,13 +66,13 @@ function SubmitContact() {}
           v-model="message"
           name="message"
           :class="{ 'border-slate-500': message, 'border-red-500': !message }"
-          class="border-2 border-slate-500 p-2 rounded-md block w-full h-28"
+          class="border-2 p-2 rounded-md block w-full h-28"
           type="text"
-          placeholder="example@email.com"
+          placeholder="Your message here!"
         ></textarea>
       </div>
       <div class="col-span-2 mb-2 flex flex-col items-center">
-        <button type="submit" class="p-4 bg-orange-600 rounded-md text-white font-bold">
+        <button @click="(e) => SubmitContact(e)" type="submit" class="p-4 bg-orange-600 rounded-md text-white font-bold">
           Submit
         </button>
       </div>

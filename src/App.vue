@@ -22,12 +22,12 @@ import { RouterLink, RouterView } from 'vue-router'
         </div>
         <img class="rounded-full mt-24 mb-4 w-full" src="./assets/photo_of_me.jpg">
       
-        <div class="flex flex-auto items-center w-full mb-4">
-          <a class="block">
-            <img class="w-10" src="./assets/icons/github-square.svg">
+        <div class="flex flex-auto place-content-center w-full mb-2">
+          <a href="https://github.com/ethanmci" class="block">
+            <img alt="GitHub Logo" class="transition-all cursor-pointer w-10 hover:invert hover:hue-rotate-30 hover:contrast-50" src="./assets/icons/github-square.svg">
           </a>
-          <a href="" class="block">
-            <img class="w-10" src="./assets/icons/linkedin-square.svg">
+          <a href="https://www.linkedin.com/in/ethansndrmc/" class="block">
+            <img alt="LinkedIn Logo" class="transition-all cursor-pointer w-10 hover:invert hover:hue-rotate-30 hover:contrast-50" src="./assets/icons/linkedin-square.svg">
           </a>
         </div>
         <p class="font-bricolage">Hello, my name is Ethan! I'm a graduate from the Interactive Multimedia Design program at Carleton University with a specialization in Full-Stack Web Development.</p>
