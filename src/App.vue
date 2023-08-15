@@ -50,7 +50,7 @@ const route = useRouter();
             />
           </a>
         </div>
-        <p>
+        <p class="text-stone-800">
           Hi I'm Ethan! I'm a Web Developer and very bad at writing good bios.
         </p>
       </div>
@@ -60,7 +60,7 @@ const route = useRouter();
         class="md:col-span-3 md:block hidden h-full bg-slate-50 border-2 border-slate-500 rounded-lg shadow-md"
       >
         <header>
-          <ul class="w-full grid grid-cols-3 gap-2 pt-2 px-2 rounded-lg">
+          <ul class="w-full grid grid-cols-3 gap-2 pt-2 px-2 rounded-lg text-stone-800">
             <li class="col-span-1">
               <RouterLink
                 to="/"
@@ -87,7 +87,7 @@ const route = useRouter();
             </li>
           </ul>
         </header>
-        <RouterView class="border-t-2 border-slate-200  font-bricolage p-4"/>
+        <RouterView class="border-t-2 border-slate-200  font-bricolage p-4 text-stone-800"/>
       </div>
     </div>
   </div>
