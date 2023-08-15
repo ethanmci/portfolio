@@ -60,34 +60,34 @@ const route = useRouter();
         class="md:col-span-3 md:block hidden h-full bg-slate-50 border-2 border-slate-500 rounded-lg shadow-md"
       >
         <header>
-          <ul class="w-full grid grid-cols-3 gap-2 mt-2 px-2">
+          <ul class="w-full grid grid-cols-3 gap-2 pt-2 px-2 rounded-lg">
             <li class="col-span-1">
               <RouterLink
                 to="/"
-                :class="{ 'bg-sky-500 border-sky-500 text-white': route.currentRoute.value.path == '/', 'border-slate-200': route.currentRoute.value.path != '/' }"
-                class="w-full text-center font-bold inline-block p-2 border-x-2 border-t-2 rounded-t-full hover:text-white hover:bg-sky-500 hover:border-sky-500 transition-all"
+                :class="{ 'bg-sky-600 border-sky-600 text-white': route.currentRoute.value.path == '/', 'border-slate-200': route.currentRoute.value.path != '/' }"
+                class="w-full text-center font-bold inline-block p-2 border-x-2 border-t-2 rounded-t-full hover:text-white hover:bg-sky-600 hover:border-sky-600 transition-all"
                 >Home</RouterLink
               >
             </li>
             <li class="col-span-1">
               <RouterLink
                 to="/resume"
-                :class="{ 'bg-sky-500 border-sky-500 text-white': route.currentRoute.value.path == '/resume', 'border-slate-200': route.currentRoute.value.path != '/resume' }"
-                class="w-full text-center font-bold inline-block p-2 border-x-2 border-t-2 rounded-t-full hover:text-white hover:bg-sky-500 hover:border-sky-500 transition-all"
+                :class="{ 'bg-sky-600 border-sky-600 text-white': route.currentRoute.value.path == '/resume', 'border-slate-200': route.currentRoute.value.path != '/resume' }"
+                class="w-full text-center font-bold inline-block p-2 border-x-2 border-t-2 rounded-t-full hover:text-white hover:bg-sky-600 hover:border-sky-600 transition-all"
                 >Resume</RouterLink
               >
             </li>
             <li class="col-span-1">
               <RouterLink
                 to="/contact"
-                :class="{ 'bg-sky-500 border-sky-500 text-white': route.currentRoute.value.path == '/contact', 'border-slate-200': route.currentRoute.value.path != '/contact' }"
-                class="w-full text-center font-bold inline-block p-2 border-x-2 border-t-2 rounded-t-full hover:text-white hover:bg-sky-500 hover:border-sky-500 transition-all"
+                :class="{ 'bg-sky-600 border-sky-600 text-white': route.currentRoute.value.path == '/contact', 'border-slate-200': route.currentRoute.value.path != '/contact' }"
+                class="w-full text-center font-bold inline-block p-2 border-x-2 border-t-2 rounded-t-full hover:text-white hover:bg-sky-600 hover:border-sky-600 transition-all"
                 >Contact</RouterLink
               >
             </li>
           </ul>
         </header>
-        <RouterView class="border-t-2 border-slate-200 font-bricolage p-4" />
+        <RouterView class="border-t-2 border-slate-200  font-bricolage p-4"/>
       </div>
     </div>
   </div>

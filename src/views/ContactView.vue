@@ -42,7 +42,7 @@ async function SubmitContact(event: Event) {
 <template>
   <main>
     <h2
-      class="font-black 2xl:text-5xl text-3xl text-center antialiased text-sky-900 hover:text-sky-700 transition-all mix-blend-hard-light drop-shadow-sm"
+      class="font-black 2xl:text-5xl text-3xl text-center antialiased text-sky-600 hover:text-sky-400 transition-all drop-shadow-sm"
     >
       Contact!
     </h2>
@@ -96,7 +96,7 @@ async function SubmitContact(event: Event) {
         <button
           @click="(e) => SubmitContact(e)"
           type="submit"
-          class="p-4 bg-orange-600 rounded-md text-white font-bold"
+          class="p-4 bg-orange-600 hover:bg-orange-700 rounded-md text-white font-bold"
         >
           Submit
         </button>
