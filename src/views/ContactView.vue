@@ -2,11 +2,6 @@
 import { ref } from 'vue'
 import type { Ref } from 'vue'
 
-interface FormType {
-  value: string
-  valid: boolean
-}
-
 const WEB3FORMS_ACCESS_KEY = import.meta.env.WEB3FORMS_ACCESS_KEY
 const name: Ref<string> = ref('')
 const email: Ref<string> = ref('')
