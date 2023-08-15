@@ -15,10 +15,11 @@ async function SubmitContact(event: Event) {
   if (!message.value) return
 
   // converting the entered and validated date to JSON
-  const json = JSON.stringify({
+  const json: string = JSON.stringify({
     access_key: WEB3FORMS_ACCESS_KEY,
     name: name.value,
     email: email.value,
+    subject: subject.value.length > 0 ? subject.value : 'Message',
     message: message.value,
   })
 
