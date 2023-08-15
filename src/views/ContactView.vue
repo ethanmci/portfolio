@@ -2,19 +2,40 @@
 import { ref } from 'vue'
 import type { Ref } from 'vue'
 
-const WEB3FORMS_ACCESS_KEY = import.meta.env.WEB3FORMS_ACCESS_KEY
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
 const name: Ref<string> = ref('')
 const email: Ref<string> = ref('')
 const subject: Ref<string> = ref('')
 const message: Ref<string> = ref('')
 
-function SubmitContact(event: Event) {
+async function SubmitContact(event: Event) {
   event.preventDefault()
-  if(!name.value) return;
-  if(!email.value) return;
-  if(!message.value) return;
+  if (!name.value) return
+  if (!email.value) return
+  if (!message.value) return
 
-  console.log("all good!");
+  // converting the entered and validated date to JSON
+  const json = JSON.stringify({
+    access_key: WEB3FORMS_ACCESS_KEY,
+    name: name.value,
+    email: email.value,
+    message: message.value,
+  })
+
+  // fetching
+  const res = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
+    },
+    body: json
+  })
+
+  const result = await res.json()
+  if (result.success) {
+    console.log(result)
+  }
 }
 </script>
 
@@ -72,7 +93,11 @@ function SubmitContact(event: Event) {
         ></textarea>
       </div>
       <div class="col-span-2 mb-2 flex flex-col items-center">
-        <button @click="(e) => SubmitContact(e)" type="submit" class="p-4 bg-orange-600 rounded-md text-white font-bold">
+        <button
+          @click="(e) => SubmitContact(e)"
+          type="submit"
+          class="p-4 bg-orange-600 rounded-md text-white font-bold"
+        >
           Submit
         </button>
       </div>
