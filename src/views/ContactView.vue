@@ -40,7 +40,7 @@ async function SubmitContact(event: Event) {
 
   const result = await res.json()
   if (result.success) {
-    console.log(result)
+    submitted.value = true
   }
 }
 </script>
@@ -111,7 +111,7 @@ async function SubmitContact(event: Event) {
       </form>
     </div>
     <div v-else>
-
+      <p class="text-center antialiased text-xl">Thanks for contacting me!</p>
     </div>
   </main>
 </template>
