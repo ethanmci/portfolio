@@ -1,9 +1,9 @@
 <script setup lang="ts">
 export interface Props {
     role?: string
-    location?: string,
-    startDate?: string,
-    endDate?: string,
+    location?: string
+    startDate?: string
+    endDate?: string
     description?: string
 }
 

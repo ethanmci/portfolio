@@ -8,6 +8,17 @@ const email: Ref<string> = ref('')
 const subject: Ref<string> = ref('')
 const message: Ref<string> = ref('')
 const submitted: Ref<boolean> = ref(false)
+const status: Ref<Array<string>> = ref([])
+
+function NewMessage() {
+  // resetting the value 
+  submitted.value = false
+}
+
+watch([name, email, subject, message], () => {
+  console.log('param updated')
+})
+
 
 async function SubmitContact(event: Event) {
   event.preventDefault()
@@ -25,7 +36,7 @@ async function SubmitContact(event: Event) {
   })
 
   watch(message, () => {
-    console.log('msg changed!');
+    console.log('msg changed!')
   })
 
   // fetching
@@ -46,7 +57,7 @@ async function SubmitContact(event: Event) {
 </script>
 
 <template>
-  <main class="transition-all ">
+  <main class="transition-all">
     <div v-if="!submitted">
       <h2
         class="font-black 2xl:text-5xl text-3xl text-center antialiased text-sky-600 hover:text-sky-400 transition-all drop-shadow-sm"
@@ -103,6 +114,7 @@ async function SubmitContact(event: Event) {
           <button
             @click="(e) => SubmitContact(e)"
             type="submit"
+            :class="{'bg-orange-600 hover:bg-orange-700': status.length > 0, 'bg-slate-600': status.length <= 0}"
             class="p-4 bg-orange-600 hover:bg-orange-700 rounded-md text-white font-bold"
           >
             Submit
@@ -110,8 +122,15 @@ async function SubmitContact(event: Event) {
         </div>
       </form>
     </div>
-    <div v-else>
+    <div v-else class="flex flex-col items-center">
       <p class="text-center antialiased text-xl">Thanks for contacting me!</p>
+      <br/>
+      <button
+        :on-click="NewMessage"
+        class="p-4 bg-orange-600 hover:bg-orange-700 rounded-md text-white font-bold"
+      >
+        Submit another message
+      </button>
     </div>
   </main>
 </template>
