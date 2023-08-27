@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import type { Ref } from 'vue'
+import FeedbackBox from '@/components/FeedbackBox.vue'
 
 const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY
 const name: Ref<string> = ref('')
@@ -8,17 +9,17 @@ const email: Ref<string> = ref('')
 const subject: Ref<string> = ref('')
 const message: Ref<string> = ref('')
 const submitted: Ref<boolean> = ref(false)
-const status: Ref<Array<string>> = ref([])
+const status: Ref<boolean> = ref(false)
+const statusMessage: Ref<string> = ref('')
 
 function NewMessage() {
-  // resetting the value 
+  // resetting the value
   submitted.value = false
 }
 
 watch([name, email, subject, message], () => {
   console.log('param updated')
 })
-
 
 async function SubmitContact(event: Event) {
   event.preventDefault()
@@ -35,8 +36,20 @@ async function SubmitContact(event: Event) {
     message: message.value
   })
 
-  watch(message, () => {
-    console.log('msg changed!')
+  watch([name, email, message], () => {
+    let subOut: Array<string> = []
+    if (!name.value) subOut.push('Name')
+    if (!email.value) subOut.push('Email')
+    if (!message.value) subOut.push('Message')
+
+    if (subOut.length == 0) {
+      status.value = true
+    } else {
+      let out: string = ''
+      subOut.forEach(e => {
+        
+      });
+    }
   })
 
   // fetching
@@ -66,6 +79,7 @@ async function SubmitContact(event: Event) {
       </h2>
       <p class="text-sm text-center text-slate-500">(feel free to contact me on linkedin also)</p>
       <br />
+      <FeedbackBox type="" :message="statusMessage" />
       <form class="grid grid-cols-2">
         <div class="md:col-span-1 col-span-2 md:mr-4 mb-2">
           <label for="name"><span class="text-red-500">*</span>Name</label>
@@ -114,7 +128,10 @@ async function SubmitContact(event: Event) {
           <button
             @click="(e) => SubmitContact(e)"
             type="submit"
-            :class="{'bg-orange-600 hover:bg-orange-700': status.length > 0, 'bg-slate-600': status.length <= 0}"
+            :class="{
+              'bg-orange-600 hover:bg-orange-700': status,
+              'bg-slate-600': !status
+            }"
             class="p-4 bg-orange-600 hover:bg-orange-700 rounded-md text-white font-bold"
           >
             Submit
@@ -124,7 +141,7 @@ async function SubmitContact(event: Event) {
     </div>
     <div v-else class="flex flex-col items-center">
       <p class="text-center antialiased text-xl">Thanks for contacting me!</p>
-      <br/>
+      <br />
       <button
         :on-click="NewMessage"
         class="p-4 bg-orange-600 hover:bg-orange-700 rounded-md text-white font-bold"

@@ -7,7 +7,7 @@ export interface Props {
 // TODO: finish implementing this so the contact form can have live feedback
 
 const props = withDefaults(defineProps<Props>(), {
-  message: 'The dialog'
+  message: 'The dialog text!'
 })
 
 </script>
