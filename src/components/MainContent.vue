@@ -14,7 +14,19 @@ const projects: Ref<Array<Project>> = ref([
   {
     title: 'Capy Island',
     image: undefined,
-    description: 'A party game where players, who are capybaras, play mini-games on an island to collect hats',
+    description: 'A party game where players, who are capybaras, play mini-games on an island to collect hats.',
+    year: '2023'
+  },
+  {
+    title: 'Capy Island',
+    image: undefined,
+    description: '',
+    year: '2023'
+  },
+  {
+    title: 'Capy Island',
+    image: undefined,
+    description: '',
     year: '2023'
   },
   {
@@ -27,7 +39,7 @@ const projects: Ref<Array<Project>> = ref([
 </script>
 
 <template>
-  <div>
+  <div class="grid grid-cols-3 gap-2 overflow-scroll">
     <ProjectItem
       v-for="(project, i) in projects"
       v-bind:title="project.title"
