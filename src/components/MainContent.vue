@@ -19,8 +19,8 @@ const projects: Ref<Array<Project>> = ref([...ProjectsYAML[0].projects])
 </script>
 
 <template>
-  <h2>Projects</h2>
-  <div class="grid grid-cols-3 gap-2 h-full overflow-scroll">
+  <h2 class="font-black 2xl:text-5xl text-3xl text-center antialiased mb-4 text-sky-600 hover:text-sky-400 transition-all drop-shadow-sm">Projects</h2>
+  <div class="grid grid-cols-3 gap-2 overflow-scroll">
     <ProjectItem
       v-for="(project, i) in projects"
       v-bind:title="project.title"

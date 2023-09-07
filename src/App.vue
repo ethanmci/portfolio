@@ -121,7 +121,7 @@ const route = useRouter()
             </li>
           </ul>
         </header>
-        <RouterView class="h-full border-t-2 border-slate-200 font-bricolage p-4 text-stone-800" />
+        <RouterView class="max-h-full border-t-2 border-slate-200 font-bricolage p-4 text-stone-800" />
       </div>
     </div>
   </div>
