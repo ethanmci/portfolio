@@ -1,37 +1,37 @@
 - projects:
   - title: "Capy Island"  
-  cardImage: null
-  year: '2023'
-  description: A 4 Player couch co-op game made as a Capstone project.
-  tags: [Game Development, Unity, School]
-  link: 'https://github.com/nabeehaali/Capy-Island' 
+    image: null
+    year: '2023'
+    description: A 4 Player couch co-op game made as a Capstone project.
+    tags: [Game Development, Unity, School]
+    link: 'https://github.com/nabeehaali/Capy-Island'
   - title: "Occasional"
-  cardImage: null
-  year: '2022'
-  description: A react-based web app made for ITEC4012.
-  tags: [Web, School]
-  link: 'https://github.com/ethanmci/itec4012-oc-transpo' 
+    image: null
+    year: '2022'
+    description: A react-based web app made for ITEC4012.
+    tags: [Web, School]
+    link: 'https://github.com/ethanmci/itec4012-oc-transpo' 
   - title: "The Shoppies"
-  cardImage: null
-  year: '2020'
-  description: A Vue-based.
-  tags: [Web]
-  link: 'https://ethanmci.github.io/the-shoppies-app/'
+    image: null
+    year: '2020'
+    description: A Vue-based.
+    tags: [Web]
+    link: 'https://ethanmci.github.io/the-shoppies-app/'
   - title: "Hangman Dungeon"
-  cardImage: null
-  year: '2020'
-  description: A C++ based Hangman Rouge-like that runs in the terminal. Made for IMD3006.
-  tags: [C++, School]
-  link: 'https://github.com/ethanmci/Final-Project-IMD3006'  
+    image: null
+    year: '2020'
+    description: A C++ based Hangman Rouge-like that runs in the terminal. Made for IMD3006.
+    tags: [C++, School]
+    link: 'https://github.com/ethanmci/Final-Project-IMD3006'  
   - title: "Go Fish"
-  cardImage: null
-  year: '2020'
-  description: A Go Fish game made in a single HTML file.
-  tags: [Web, School]
-  link: 'https://github.com/ethanmci/go-fish' 
+    image: null
+    year: '2020'
+    description: A Go Fish game made in a single HTML file.
+    tags: [Web, School]
+    link: 'https://github.com/ethanmci/go-fish' 
   - title: "Go Fish"
-  cardImage: null
-  year: '2019'
-  description: A mock E-Commerce site made using HTML, CSS, and JavaScript for IMD1005.
-  tags: [Web, School]
-  link: 'https://github.com/ethanmci/E-CommerceFinal' 
+    image: null
+    year: '2019'
+    description: A mock E-Commerce site made using HTML, CSS, and JavaScript for IMD1005.
+    tags: [Web, School]
+    link: 'https://github.com/ethanmci/E-CommerceFinal' 
