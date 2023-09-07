@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
   description: 'No project description.'
 })
 
-const placeholderFn = () => { console.log('accesible') }
+const placeholderFn = () => { console.log('accessible') }
 </script>
 <template>
   <a href="#" :on-click="() => placeholderFn()">
