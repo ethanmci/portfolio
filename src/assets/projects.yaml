@@ -1,9 +1,15 @@
 - projects:
+  - title: "ethanmc.xyz"  
+    image: null
+    year: '2023'
+    description: A personal portfolio website made using Vue, Vite, and Typescript that you're looking at right now!
+    tags: [Web]
+    link: 'https://github.com/ethanmci/portfolio'
   - title: "Capy Island"  
     image: null
     year: '2023'
     description: A 4 Player couch co-op game made as a Capstone project.
-    tags: [Game Development, Unity, School]
+    tags: [Game Development, School]
     link: 'https://github.com/nabeehaali/Capy-Island'
   - title: "Occasional"
     image: null

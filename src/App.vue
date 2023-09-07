@@ -54,7 +54,7 @@ const route = useRouter()
         <img
           alt="A Photo of Ethan McIntyre, incredibly hirable web developer and creator of this website"
           class="rounded-full md:mt-18 mt-16 mb-4 w-full"
-          src="./assets/photo_of_me.jpg"
+          src="@/assets/photo_of_me.jpg"
         />
 
         <div class="flex flex-auto place-content-center w-full mb-2">
