@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
   year: '202X',
   description: 'No project description.'
 })
-
+ 
 const placeholderFn = () => { console.log('accessible') }
 </script>
 <template>

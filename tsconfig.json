@@ -7,5 +7,10 @@
     {
       "path": "./tsconfig.app.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "types": [
+      "@modyfi/vite-plugin-yaml/modules",
+    ]
+  },
 }
