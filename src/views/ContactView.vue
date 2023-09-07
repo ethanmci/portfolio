@@ -19,6 +19,22 @@ function NewMessage() {
 
 watch([name, email, subject, message], () => {
   console.log('param updated')
+  let subOut: Array<string> = []
+  if (!name.value) subOut.push('Name')
+  if (!email.value) subOut.push('Email')
+  if (!message.value) subOut.push('Message')
+
+  if (subOut.length == 0) {
+    status.value = true
+    statusMessage.value = ''
+  } else {
+    let out: string = ''
+    subOut.forEach((e) => {
+      out += e
+    })
+    statusMessage.value = out
+    status.value = false
+  }
 })
 
 async function SubmitContact(event: Event) {
@@ -34,22 +50,6 @@ async function SubmitContact(event: Event) {
     email: email.value,
     subject: subject.value.length > 0 ? subject.value : 'Message',
     message: message.value
-  })
-
-  watch([name, email, message], () => {
-    let subOut: Array<string> = []
-    if (!name.value) subOut.push('Name')
-    if (!email.value) subOut.push('Email')
-    if (!message.value) subOut.push('Message')
-
-    if (subOut.length == 0) {
-      status.value = true
-    } else {
-      let out: string = ''
-      subOut.forEach(e => {
-        
-      });
-    }
   })
 
   // fetching
@@ -79,7 +79,7 @@ async function SubmitContact(event: Event) {
       </h2>
       <p class="text-sm text-center text-slate-500">(feel free to contact me on linkedin also)</p>
       <br />
-      <FeedbackBox type="" :message="statusMessage" />
+      <FeedbackBox v-if="status" type="" :message="statusMessage" />
       <form class="grid grid-cols-2">
         <div class="md:col-span-1 col-span-2 md:mr-4 mb-2">
           <label for="name"><span class="text-red-500">*</span>Name</label>
@@ -130,9 +130,9 @@ async function SubmitContact(event: Event) {
             type="submit"
             :class="{
               'bg-orange-600 hover:bg-orange-700': status,
-              'bg-slate-600': !status
+              'bg-slate-600 cursor-not-allowed': !status
             }"
-            class="p-4 bg-orange-600 hover:bg-orange-700 rounded-md text-white font-bold"
+            class="p-4 rounded-md text-white font-bold"
           >
             Submit
           </button>

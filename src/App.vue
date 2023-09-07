@@ -80,7 +80,7 @@ const route = useRouter()
 
       <!-- contains nav menu, hidden and moved to one  on small screens -->
       <div
-        class="md:col-span-3 md:block hidden h-full bg-slate-50 border-2 border-slate-500 rounded-lg shadow-md"
+        class="relative md:col-span-3 md:block hidden h-full bg-slate-50 border-2 border-slate-500 rounded-lg shadow-md"
       >
         <header>
           <ul class="w-full grid grid-cols-3 gap-2 pt-2 px-2 rounded-lg text-stone-800">
@@ -92,7 +92,7 @@ const route = useRouter()
                   'border-slate-200': route.currentRoute.value.path != '/'
                 }"
                 class="w-full text-center font-bold inline-block p-2 border-x-2 border-t-2 rounded-t-full hover:text-white hover:bg-sky-600 hover:border-sky-600 transition-all"
-                >Home</RouterLink
+                >Projects</RouterLink
               >
             </li>
             <li class="col-span-1">
@@ -121,7 +121,7 @@ const route = useRouter()
             </li>
           </ul>
         </header>
-        <RouterView class="border-t-2 border-slate-200 font-bricolage p-4 text-stone-800" />
+        <RouterView class="h-full border-t-2 border-slate-200 font-bricolage p-4 text-stone-800" />
       </div>
     </div>
   </div>
