@@ -1,0 +1,35 @@
+- experience:
+  - title: Web Developer
+    company: Health Canada - Health Products and Food
+    startEnd: Jan. 2021 - Aug. 2021 & May 2022 - Aug. 2022
+    location: Ottawa, ON.
+    tasks:
+      - Developed a front-end search tool using Vue, HTML, CSS, Git, Node JS, Nuxt JS and Tailwind CSS allowing users to construct complicated custom search queries to search through data stored in a PostgreSQL database
+      - Built an Express JS-based REST API to effectively provide the front-end of the application with JSON data pulled from PostgreSQL and Elasticsearch databases using queries, and used Postman to assess response time and test the API’s endpoints
+      - Developed remotely using SSH in Visual Studio Code and Linux CLI to connect to a remote server used to host development projects
+      - Built a small-scale tool used to find and highlight drug related terms in user provided text using an existing API, Svelte, Axios, and Tailwind CSS
+      - Created a NextJS / React-based static site template that could be configured using a YAML file that uses Drupal as a Headless CMS
+      
+  - title: Full Stack Developer
+    company: BlackBerry
+    startEnd: Aug. 2021 - Dec. 2021
+    location: Ottawa, ON.
+    tasks:
+      - Worked to help address bugs within the Radar system using a combination of Angular, React, NodeJS, and SQL, and other web technologies
+      - Created automated UI tests using WebdriverIO to verify that key features of the Radar portal web-application were working as expected
+      - Participated in regular team stand-ups and worked in two-week long sprints in accordance with the Scrum framework
+
+  - title: Assistant Front End Developer
+    company: Carleton University
+    startEnd: May. 2020 - Aug. 2020
+    location: Ottawa, ON.
+    tasks:
+      - Developed and assisted in designing various components using Vue, HTML, CSS, JavaScript, and Tailwind CSS, and later helped reconfigure the components to work within an ongoing overhaul / redesign of a PHP-based WordPress theme
+      - Helped create a documentation website for in-development Vue components using Laravel, Jigsaw, Vue, HTML, and CSS with the aim of assisting and expediting future development projects within the office
+      - Worked fully remotely using a combination of MS Outlook, MS Teams, and Slack to create consistent streams of communication, and enable collaboration with other developers
+
+- education:
+  - school: Carleton University
+    program: Interactive Multimedia Design, Web & User Interfaces Stream
+    startEnd: Sept. 2018 – Apr. 2023
+    location: Ottawa, ON.
