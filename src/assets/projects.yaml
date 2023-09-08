@@ -3,39 +3,48 @@
     image: 'ethanmc.jpg'
     year: '2023'
     description: A personal portfolio website made using Vue, Vite, and Typescript that you're looking at right now!
+    fullDesc: A personal portfolio website made using Vue, Vite, and Typescript that you're looking at right now!
     tags: [Web]
     link: 'https://github.com/ethanmci/portfolio'
+
   - title: "Capy Island"  
     image: capy_island.jpg
     year: '2023'
-    description: A 4 Player couch co-op game made as a Capstone project.
+    description: A Unity-based 4 Player couch co-op game made as a Capstone project.
+    fullDesc: 'Created with: Nabeeha Ali, Andrew Holland, Jenny Nguyen, Amy Truong, & Rebecca Yee <br> <br> 
+      You and 3 friends will compete on an island in 4-6 minigames to decide who is the winner. Collect basic and special hats to give yourself a step up in the final round, and be selected as the winner. A great game for a chill night with friends!'
     tags: [Game Development, School]
     link: 'https://github.com/nabeehaali/Capy-Island'
+
   - title: "Occasional"
-    image: null
+    image: occasional.jpg
     year: '2022'
-    description: A react-based web app made for ITEC4012.
+    description: A React-based OCTranspo transit app made for ITEC4012.
     tags: [Web, School]
     link: 'https://github.com/ethanmci/itec4012-oc-transpo' 
+
   - title: "The Shoppies"
     image: shoppies.jpg
     year: '2020'
-    description: A Vue-based.
+    description: A single-page Vue-based web app for nominating movies. Made for a Shopify challenge.
     tags: [Web]
     link: 'https://ethanmci.github.io/the-shoppies-app/'
-  - title: "Hangman Dungeon"
-    image: null
+
+  - title: "Escaping the Gallows"
+    image: escaping_the_gallows.jpg
     year: '2020'
     description: A C++ based Hangman Rouge-like that runs in the terminal. Made for IMD3006.
-    tags: [C++, School]
+    tags: [Game Development, School]
     link: 'https://github.com/ethanmci/Final-Project-IMD3006'  
+
   - title: "Go Fish"
-    image: null
+    image: go_fish.jpg
     year: '2020'
     description: A Go Fish game made in a single HTML file.
-    tags: [Web, School]
+    tags: [Web, Game Development, School]
     link: 'https://github.com/ethanmci/go-fish' 
-  - title: "Go Fish"
+
+  - title: "Sick Kicks"
     image: sick_kicks.jpg
     year: '2019'
     description: A mock E-Commerce site made using HTML, CSS, and JavaScript for IMD1005.

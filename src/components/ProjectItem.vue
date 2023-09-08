@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import TagColour from '@/assets/functions/TagColour'
 import defaultImg from '@/assets/project_default.jpg'
 export interface Props {
   cardImage?: string | undefined
@@ -16,25 +17,12 @@ const props = withDefaults(defineProps<Props>(), {
   description: 'No project description.'
 })
 
-const TagColour = (tag: string) => {
-  switch (tag) {
-    case 'Web':
-      return 'bg-orange-600'
-    case 'Game Development':
-      return 'bg-green-600'
-    case 'School':
-      return 'bg-red-600'
-    default: 
-      return 'bg-sky-600'
-  }
-}
-
 const imgURL: string = new URL(`../assets/project_thumbnails/${props.cardImage}`, import.meta.url).href
  
 const placeholderFn = () => { console.log('accessible') }
 </script>
 <template>
-  <a href="#" :on-click="() => placeholderFn()">
+  <a href="#">
     <div
       class="md:col-span-1 col-span-full md:h-96 h-1/2 p-2 border-2 rounded-lg bg-white border-slate-500 hover:bg-slate-300 hover:border-sky-500 cursor-pointer transition-all"
     >
