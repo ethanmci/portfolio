@@ -29,10 +29,11 @@ watch([name, email, subject, message], () => {
     statusMessage.value = ''
   } else {
     let out: string = ''
-    subOut.forEach((e) => {
-      out += e
-    })
-    statusMessage.value = out
+    for(let i = 0; i < subOut.length; i++) {
+      if(i != 0) out += ", "
+      out += subOut[i]
+    }
+    statusMessage.value = `${out} field${subOut.length > 1 ? 's are' : ' is'} empty or invalid.`
     status.value = false
   }
 })
@@ -79,7 +80,7 @@ async function SubmitContact(event: Event) {
       </h2>
       <p class="text-sm text-center text-slate-500">(feel free to contact me on linkedin also)</p>
       <br />
-      <FeedbackBox v-if="status" type="" :message="statusMessage" />
+      <FeedbackBox v-if="!status" type="danger" :message="statusMessage" />
       <form class="grid grid-cols-2">
         <div class="md:col-span-1 col-span-2 md:mr-4 mb-2">
           <label for="name"><span class="text-red-500">*</span>Name</label>
