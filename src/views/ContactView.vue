@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import type { Ref } from 'vue'
 import FeedbackBox from '@/components/FeedbackBox.vue'
 
@@ -17,11 +17,16 @@ function NewMessage() {
   submitted.value = false
 }
 
-watch([name, email, subject, message], () => {
-  console.log('param updated')
+function ValidateEmail(email: string): boolean {
+  // eslint-disable-next-line no-useless-escape
+  let regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+  return (regex.test(email))
+}
+
+function HandleContactUpdate(): void {
   let subOut: Array<string> = []
   if (!name.value) subOut.push('Name')
-  if (!email.value) subOut.push('Email')
+  if (!ValidateEmail(email.value)) subOut.push('Email')
   if (!message.value) subOut.push('Message')
 
   if (subOut.length == 0) {
@@ -36,7 +41,7 @@ watch([name, email, subject, message], () => {
     statusMessage.value = `${out} field${subOut.length > 1 ? 's are' : ' is'} empty or invalid.`
     status.value = false
   }
-})
+} 
 
 async function SubmitContact(event: Event) {
   event.preventDefault()
@@ -68,6 +73,10 @@ async function SubmitContact(event: Event) {
     submitted.value = true
   }
 }
+
+watch([name, email, subject, message], () => HandleContactUpdate())
+
+onMounted(() => HandleContactUpdate())
 </script>
 
 <template>
@@ -144,7 +153,7 @@ async function SubmitContact(event: Event) {
       <p class="text-center antialiased text-xl">Thanks for contacting me!</p>
       <br />
       <button
-        :on-click="NewMessage"
+        @click="NewMessage()"
         class="p-4 bg-orange-600 hover:bg-orange-700 rounded-md text-white font-bold"
       >
         Submit another message
