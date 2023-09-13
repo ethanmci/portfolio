@@ -23,6 +23,14 @@
     tags: [Web, School]
     link: 'https://github.com/ethanmci/itec4012-oc-transpo' 
 
+  - title: "Morse Ship"
+    image: morse_ship.jpg
+    year: '2022'
+    description: A small single-input game made in Unity.
+    fullDesc: Made for an Advanced Game Development course, this game was made by me with the sole limitation being that only one button could be used for input.
+    tags: [Game Development, School]
+    link: 'https://ethanmci.itch.io/morse-ship'  
+
   - title: "The Shoppies"
     image: shoppies.jpg
     year: '2020'

@@ -6,6 +6,17 @@ export interface Props {
 
 // TODO: finish implementing this so the contact form can have live feedback
 
+const TypeHandler = (type: string | undefined) => {
+  switch (type) {
+    case 'warn':
+      return 'bg-yellow-600/70'
+    case 'danger':
+      return 'bg-red-600/70'
+    default: 
+      return 'bg-sky-600/70'
+  }
+} 
+
 const props = withDefaults(defineProps<Props>(), {
   message: 'The dialog text!'
 })
@@ -13,7 +24,8 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 <template>
   <div
-    class="flex items-center justify-center p-3 rounded-md bg-yellow-600/50"
+    class="flex items-center justify-center p-3 rounded-md"
+    :class="TypeHandler(type)"
   >
     <div class="inline-block">
       <svg
