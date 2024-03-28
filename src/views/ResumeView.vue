@@ -38,8 +38,5 @@ const education: Ref<Array<Education>> = ref([...ResumeYAML[1].education])
         :location="edu.location"
       />
     </div>
-    <a :href="resumeUrl" download>
-      <button class="p-4 bg-orange-600 hover:bg-orange-700 rounded-md text-white font-bold mx-auto">Download the PDF version!</button>
-    </a>
   </main>
 </template>
